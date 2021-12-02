@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 150px auto;
+    font-family: sans-serif;
+    background: white;
+}
+nav {
+    width: 100%;
+    background:black;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+}
+nav a {
+    font-size: 20px;
+    letter-spacing: .7px;
+    color: white;
+    margin: 7px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+nav a:hover {
+    color: #2293fb;
+}
+nav a:active {
+    color: #f8f62f;
+}
+/*=========responsive==========*/
+@media only screen and (max-width: 768px){
+    body{
+        grid-template-columns: unset;
+        grid-template-rows: 50px 1fr;
+    }
+    nav{
+        flex-direction: row;
+        padding: 0;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
